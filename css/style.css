@@ -1,0 +1,26 @@
+.navbar{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background: rgb(0, 0, 0); opacity: 0.65;
+    width: 100%;
+}
+
+.size{
+    width: 70px;
+    height: 70px;
+}
+
+.carousel-inner>.carousel-item>img{
+    width: 640px;
+    height: 634px;
+}
+
+.btn{
+    opacity: 0.75;
+}
+
+.btn:hover{
+    transform: scale(0.9);
+    transition: 110ms;
+}
