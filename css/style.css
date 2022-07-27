@@ -28,3 +28,8 @@
 .bordes{
     border: black dotted 5px;
 }
+
+.pie{
+    text-align: center;
+    background-color: black;
+}
