@@ -25,8 +25,8 @@
     transition: 110ms;
 }
 
-.bordes{
-    border: black dotted 5px;
+.color{
+    color: black;
 }
 
 .pie{
