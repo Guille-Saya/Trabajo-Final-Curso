@@ -1,3 +1,4 @@
+/* INICIO */
 .navbarcss{
     position: absolute;
     top: 0;
@@ -30,8 +31,18 @@
 }
 
 .pie{
+    padding-top: 10px;
     text-align: center;
     background-color: black;
+    box-shadow: 5px 5px 10px;
+}
+
+.pie > p{
+    color: #ffff;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* ENVIO */
@@ -113,12 +124,13 @@ section > h1 {
 }
 
 .masthead-heading {
-  margin-top: -0.2em;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  font-size: 6em;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+    margin-top: -0.2em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.1em;
+    text-transform: uppercase;
 }
 .introduction > p,
 .location > p,
@@ -154,4 +166,35 @@ section > h1 {
   color: #ffff;
 }
 
-  
+/* CATALOGO */
+ .button-color{
+    background-color: #F1C863;
+ }
+
+ .layout-h1{
+    color: #F1C863;
+    margin-top: -0.2em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 0.1em;
+ }
+
+ .layout-p{
+    margin-bottom: 0.1em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 2em;
+ }
+
+ .layout-h1, .layout-p, .texto{
+    text-align: center;
+ } 
+
+ .texto > p{
+    font-weight: 300;
+    letter-spacing: 0.05em;
+ }
+
+

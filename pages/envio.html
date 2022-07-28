@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos de envio</title>
+    <title>Datos de envio - AutoFactor</title>
+    <link rel="shortcut icon" href="../multimedia/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
-
+    <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7675568d7c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -36,50 +37,56 @@
 <body>
     <main>
         <div class="container container-fluid">
+          <div class="row">
+            <div class="title">
+              <p class="layout-p">Datos de</p>
+              <h1 class="layout-h1">envio</h1>
+            </div>
+          </div>
             <div class="row">
                 <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <form>
                         <div class="my-3 mb-3">
                             <label for="nombre" class="form-label">Nombre: </label>
-                            <input type="text" class="form-control" id="proyecto" placeholder="Tu nombre..." required>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre..." required maxlength="20">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="apellido" class="form-label">Apellido: </label>
-                          <input type="text" class="form-control" id="proyecto" placeholder="Tu apellido..." required>
+                          <input type="text" class="form-control" id="apellido" placeholder="Tu apellido..." required maxlength="20">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="dni" class="form-label">DNI: </label>
-                          <input type="number" class="form-control" id="proyecto" placeholder="Tu DNI..." required>
+                          <input type="text" class="form-control" id="dni" placeholder="Tu DNI..." required onkeypress="return validaNumeros(event)" maxlength="8">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="direccion" class="form-label">Direccion: </label>
-                          <input type="text" class="form-control" id="direccion" placeholder="Tu Direccion..." required>
+                          <input type="text" class="form-control" id="direccion" placeholder="Tu Direccion..." required maxlength="20">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="dnumero" class="form-label">Numero: </label>
-                          <input type="number" class="form-control" id="dnumero" placeholder="Numero de calle..." required>
+                          <input type="text" class="form-control" id="dnumero" placeholder="Numero de calle..." required maxlength="4" onkeypress="return validaNumeros(event)">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="piso" class="form-label">Piso: *no obligatorio*</label>
-                          <input type="text" class="form-control" id="piso" placeholder="Tu piso...">
+                          <input type="text" class="form-control" id="piso" placeholder="Tu piso..." maxlength="2" onkeypress="return validaNumeros(event)">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="entrecalles" class="form-label">Entre calles: *no obligatorio*</label>
-                          <input type="text" class="form-control" id="calle1" placeholder="Calle 1...">
+                          <input type="text" class="form-control" id="calle1" placeholder="Calle 1..." maxlength="20">
                           <br>
-                          <input type="text" class="form-control" id="calle2" placeholder="Calle 2...">
+                          <input type="text" class="form-control" id="calle2" placeholder="Calle 2..." maxlength="20">
                         </div>
                         <div class="my-3 mb-3">
                           <label for="cp" class="form-label">Codigo postal: </label>
-                          <input type="number" class="form-control" id="cp" placeholder="Tu codigo postal..." required>
-                          <label for="ask" class="form-label"><a href="https://codigopostal.com.ar/" target="_blank" rel="noopener noreferrer">¿No sabes cual es tu codigo postal?</a></label>
+                          <input type="text" class="form-control" id="cp" placeholder="Tu codigo postal..." required maxlength="4" onkeypress="return validaNumeros(event)">
+                          <label for="ask" class="form-label" ><a href="https://codigopostal.com.ar/" target="_blank" rel="noopener noreferrer">¿No sabes cual es tu codigo postal?</a></label>
                         </div>
                         
                         
                         
                         <div class="d-grid gap-2">
-                            <button class="btn btn-success">Guardar</button>
-                            <button class="btn btn-secondary">Deshacer</button>
+                            <button class="btn btn-warning" type="submit" onclick="return confEnvio()">Guardar</button>
+                            <button class="btn btn-dark" type="reset" onclick="return borrar()">Deshacer</button>
                         </div>
                         
                     </form>
@@ -94,7 +101,19 @@
         
         </div>
     </main>
+
+    <footer class="content-footer">
+      <p>Pagina final Lautaro Sayavedra || 2022 &copy;.</p>
+        <ul class="social">
+          <li><a class="css-is-deranged" href="https://github.com/lautarosaya" target="_blank"><i class="fa-brands fa-github">GitHub</i></a></li>
+          <li><a class="css-is-deranged" href="https://twitter.com/LautaroSayaved4" target="_blank"><i class="fa-brands fa-twitter">Twitter</i></a></li>
+          <li><a class="css-is-deranged" href="https://api.whatsapp.com/send?phone=3364182636&text=Hola, necesito mas informacion sobre el catalogo!" target="_blank"><i class="fa-brands fa-whatsapp">Whatsapp</i></a></li>
+      </ul>
+    
+  </footer>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- JS CUSTOM -->
+    <script src="../js/script.js"></script>
 </body>
 </html>
